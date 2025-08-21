@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
+import { ClerkProvider } from "@clerk/nextjs";
 
 config.autoAddCss = false;
 
@@ -28,13 +29,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    // Clerk Authentication 
+  <ClerkProvider>
+
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+        >
         <Navbar />
         {children}
       </body>
     </html>
+  </ClerkProvider>
   );
 }

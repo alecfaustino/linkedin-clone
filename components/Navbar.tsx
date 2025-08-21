@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome, faSearch, faBell, faUser } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { SignedIn, SignedOut, SignIn, SignInButton } from "@clerk/nextjs";
 
 export default function Navbar() {
   return (
@@ -26,11 +27,21 @@ export default function Navbar() {
           <FontAwesomeIcon icon={faBell} size="lg" />
           <span>Notifications</span>
         </div>
-        <div className="flex flex-col items-center hover:text-blue-500 cursor-pointer">
-          <FontAwesomeIcon icon={faUser} size="lg" />
-          <span>Profile</span>
-        </div>
-        
+        {/* Only if the user is signed in */}
+        <SignedIn>
+
+          <div className="flex flex-col items-center hover:text-blue-500 cursor-pointer">
+            <FontAwesomeIcon icon={faUser} size="lg" />
+            <span>Profile</span>
+          </div>
+        </SignedIn>
+
+        <SignedOut>
+
+          <button>
+            <SignInButton></SignInButton>
+          </button>
+        </SignedOut>
       </div>
     </nav>
   )
