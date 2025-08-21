@@ -20,15 +20,15 @@ export default function Navbar() {
       </div>
 
       <div className="flex items-center flex-3 gap-4 justify-end">
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center hover:text-blue-500 cursor-pointer">
           <FontAwesomeIcon icon={faHome} size="lg"/>
           <span>Home</span>
         </div>
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center hover:text-blue-500 cursor-pointer">
           <FontAwesomeIcon icon={faBell} size="lg" />
           <span>Notifications</span>
         </div>
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center hover:text-blue-500 cursor-pointer">
           <FontAwesomeIcon icon={faUser} size="lg" />
           <span>Profile</span>
         </div>
