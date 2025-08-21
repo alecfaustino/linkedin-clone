@@ -13,7 +13,7 @@ export default function Navbar() {
         {/* the search bar div to group icon and input */}
         <div className="flex flex-row border rounded-4xl">
         <FontAwesomeIcon icon={faSearch} className="p-4"/>
-        <input placeholder="Search" className="pr-4">
+        <input placeholder="Search" className="pr-4 focus:outline-none">
         
         </input>
         </div>
