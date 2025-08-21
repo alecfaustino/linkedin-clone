@@ -4,7 +4,7 @@ import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 export default function Navbar() {
   return (
-    <nav className="px-6 py-3 bg-gray-800 flex flex-row border-b border-b-grey-500">
+    <nav className="p-2 max-w-6xl mx-auto bg-gray-800 flex flex-row border-b border-b-grey-500">
       {/* The logo and search bar div */}
       <div className="flex flex-row flex-1 gap-4 items-center">
         <FontAwesomeIcon icon={faLinkedin} size="2xl" className="text-blue-500"/>
